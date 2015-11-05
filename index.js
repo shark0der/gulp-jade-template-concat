@@ -29,8 +29,7 @@ module.exports = function jadeConcat(fileName, _opts) {
     var filename = file.path
                        .replace(file.base, "")
                        .replace(".js", "")
-                       .replace('\\', '--')
-                       .replace('/', '--');
+                       .replace('\\', '/');
 
     // replace template name with filename
     var contents = file.contents.toString().replace('function template', '"' + filename + '": function');
